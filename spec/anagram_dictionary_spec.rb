@@ -12,4 +12,12 @@ describe('AnagramDictionary') do
     anagram_dictionary = AnagramDictionary.new(["tea", "eat", "cat", "act"])
     expect(anagram_dictionary.anagrams).to(eq({"aet" => ["tea", "eat"], "act" => ["cat", "act"]}))
   end
+  it "returns nothing if the input (sorted alphabetically) is not in the anagrams dictionary" do
+    anagram_dictionary = AnagramDictionary.new(["tea", "eat", "cat", "act"])
+    expect(anagram_dictionary.get_anagrams("dog")).to(eq([]))
+  end
+  it "returns all anagrams listed under the input (sorted alphabetically) in the anagrams dictionary" do
+    anagram_dictionary = AnagramDictionary.new(["tea", "eat", "cat", "act"])
+    expect(anagram_dictionary.get_anagrams("tac")).to(eq(["cat", "act"]))
+  end
 end

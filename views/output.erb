@@ -1,0 +1,7 @@
+<h2>The anagrams of <%= @word %> are:</h2>
+
+<ul>
+  <% @anagrams.each do |anagram| %>
+    <li><%= anagram %></li>
+  <% end %>
+</ul>

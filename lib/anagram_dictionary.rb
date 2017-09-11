@@ -18,7 +18,7 @@ class AnagramDictionary
       word_file = File.new(words, "r")
       word_file.each_line do |word|
         word = word.chomp
-        sorted_word = word.chars.sort.join("")
+        sorted_word = word.downcase.chars.sort.join("")
         if @anagrams.has_key?(sorted_word)
           @anagrams.fetch(sorted_word).push(word)
         else
@@ -29,7 +29,7 @@ class AnagramDictionary
   end
 
   def get_anagrams(word)
-    sorted_word = word.chars.sort.join("")
+    sorted_word = word.downcase.chars.sort.join("")
     if @anagrams.has_key?(sorted_word)
       return @anagrams.fetch(sorted_word)
     else

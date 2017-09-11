@@ -20,4 +20,8 @@ describe('AnagramDictionary') do
     anagram_dictionary = AnagramDictionary.new(["tea", "eat", "cat", "act"])
     expect(anagram_dictionary.get_anagrams("tac")).to(eq(["cat", "act"]))
   end
+  it "reads input from file builds dictionary from them" do
+    anagram_dictionary = AnagramDictionary.new("spec/words_test.txt")
+    expect(anagram_dictionary.anagrams).to(eq({"aet" => ["tea", "eat"], "act" => ["cat", "act"]}))
+  end
 end

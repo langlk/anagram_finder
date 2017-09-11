@@ -14,7 +14,10 @@ _A Ruby Script_
 
 ## Specifications
 
-* Program builds a dictionary that maps a sorted set of characters to all words in the input file with with those characters.
+* Program builds a dictionary that maps a sorted set of characters to the word that has those characters.
+  * Example Input: "tea, cat"
+  * Example Output: {"aet" => ["tea"], "act" => ["cat"]}
+* Program builds a dictionary that maps a sorted set of characters to all words in the input file with those characters.
   * Example Input: "tea, eat, cat, act"
   * Example Output: {"aet" => ["tea", "eat"], "act" => ["cat", "act"]}
 * Program returns nothing if the input (sorted alphabetically) is not in the anagrams dictionary.

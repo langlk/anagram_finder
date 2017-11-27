@@ -6,11 +6,14 @@
 
 ## Description
 
-_A Ruby Script_
+_A Ruby web app that finds all anagrams of a word in the given dictionary._
 
 ## Setup/Installation Requirements
 
 * Clone this repository
+* Run ```bundle install``` in the project root.
+* Run ```ruby app.rb```
+* Open ```localhost:4567``` in your web browser
 
 ## Specifications
 
